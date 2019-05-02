@@ -1,0 +1,15 @@
+name: nginx
+description: A basic NGINX HTTP server
+version: 0.1.0
+kubeVersion: ">=1.2.0"
+keywords:
+  - http
+  - nginx
+  - www
+  - web
+home: https://github.com/garrys2418/kops-helm.git
+sources:
+  - https://hub.docker.com/_/nginx/
+maintainers:
+  - name: GarryS
+    email: garrys2418@gmail.com

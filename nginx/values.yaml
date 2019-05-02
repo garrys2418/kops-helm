@@ -1,0 +1,25 @@
+replicaCount: 1
+restartPolicy: Never
+
+
+sleepyTime: "10"
+
+image:
+  repository: garrys1966/nodejs-csv-parser
+  pullPolicy: IfNotPresent
+
+service:
+  annotations: {}
+  clusterIP: ""
+  externalIPs: []
+  loadBalancerIP: ""
+  loadBalancerSourceRanges: []
+  type: ClusterIP
+  port: 8080
+  nodePort: ""
+
+podAnnotations: {}
+
+resources: {}
+
+nodeSelector: {}
