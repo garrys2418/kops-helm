@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-node
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: nginx-node
+    spec:
+      containers:
+      - env:
+        - name: NODE_MODE
+          value: prod
+        - name: NODE_PORT
+          value: "3000"
+        image: garrys1966/nodejs-csv-parser
+        name: nginx-node
+        ports:
+        - containerPort: 8080
+        resources: {}
+        volumeMounts:
+        - mountPath: /app
+          name: nginx-node-claim0
+      restartPolicy: Always
+      volumes:
+      - name: nginx-node-claim0
+        persistentVolumeClaim:
+          claimName: nginx-node-claim0
+status: {}
