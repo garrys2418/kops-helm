@@ -28,6 +28,6 @@ Helpers (usually called "partials" in template languages) are an
 advanced way for developers to structure their templates for optimal
 reuse.
 
-You can deploy this chart with `helm install docs/examples/nginx`. Or
+You can deploy this chart with `helm install nginx`. Or
 you can see how this chart would render with `helm install --dry-run
 --debug nginx`.
