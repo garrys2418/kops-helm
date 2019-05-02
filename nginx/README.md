@@ -30,4 +30,4 @@ reuse.
 
 You can deploy this chart with `helm install docs/examples/nginx`. Or
 you can see how this chart would render with `helm install --dry-run
---debug docs/examples/nginx`.
+--debug nginx`.
